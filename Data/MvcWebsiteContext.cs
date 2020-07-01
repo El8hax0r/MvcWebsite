@@ -10,6 +10,6 @@ namespace MvcWebsite.Data
         {
         }
 
-        public DbSet<Classes> Class { get; set; }
+        public DbSet<Classes> Classes { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MvcWebsite.Models
 {
@@ -13,6 +14,7 @@ namespace MvcWebsite.Models
         public bool UserIsAdmin { get; set; }
         public string ClassName { get; set; }
         public string ClassDescription { get; set; }
-        public decimal ClassPrice { get; set; }
+
+        public float ClassPrice { get; set; }
     }
 }
