@@ -5,6 +5,7 @@ namespace MvcWebsite.Models
 {
     public class Classes
     {
+        public int Id { get; set; }
         public int UserId { get; set; }
         public int ClassId { get; set; }
         public string UserEmail { get; set; }
