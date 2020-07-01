@@ -10,6 +10,7 @@ using MvcWebsite.Models;
 
 namespace MvcWebsite.Controllers
 {
+
     public class ClassesController : Controller
     {
         private readonly MvcWebsiteContext _context;
@@ -20,8 +21,16 @@ namespace MvcWebsite.Controllers
         }
 
         // GET: Classes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
+            //LINQ query to select classes - defined not executed
+            var classes = from m in _context.Classes
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                classes = classes.Where(s => s.ClassName.Contains(searchString));
+            }
             return View(await _context.Classes.ToListAsync());
         }
 
