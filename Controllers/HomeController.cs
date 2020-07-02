@@ -7,11 +7,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcWebsite.Models;
 using System.Web;
+using Microsoft.Data.SqlClient;
 
 namespace MvcWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        protected void loginButton_Click(object sender, EventArgs e)
+        {
+            //new SqlConnection 
+        }
 
         private readonly ILogger<HomeController> _logger;
 

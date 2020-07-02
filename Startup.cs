@@ -55,7 +55,7 @@ namespace MvcWebsite
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Classes}/{action=Index}");
+                    pattern: "{controller=Home}/{action=Index}");
             });
         }
     }

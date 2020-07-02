@@ -24,4 +24,5 @@ namespace MvcWebsite.Models
 
         public float ClassPrice { get; set; }
     }
+
 }
