@@ -20,19 +20,34 @@ namespace MvcWebsite.Controllers
             _context = context;
         }
 
-        // GET: Classes
+        // GET: Class
         public async Task<IActionResult> Index(string searchString)
         {
             //LINQ query to select classes - defined not executed
-            var classes = from m in _context.Classes
-                         select m;
+            var classname = from m in _context.Classes
+                           select m;
 
             if (!String.IsNullOrEmpty(searchString))
             {
-                classes = classes.Where(s => s.ClassName.Contains(searchString));
+                classname = classname.Where(s => s.ClassName.Contains(searchString));
             }
-            return View(await _context.Classes.ToListAsync());
+            return View(await classname.ToListAsync());
         }
+
+
+        //// GET: Password
+        //public async Task<IActionResult> Index(string searchString)
+        //{
+        //    //LINQ query to select classes - defined not executed
+        //    var password = from m in _context.Classes
+        //                 select m;
+
+        //    if (!String.IsNullOrEmpty(searchString))
+        //    {
+        //        password = password.Where(s => s.UserPassword.Equals(searchString));
+        //    }
+        //    return View(await password.ToListAsync());
+        //}
 
         // GET: Classes/Details/5
         public async Task<IActionResult> Details(int? id)

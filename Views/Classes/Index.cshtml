@@ -1,18 +1,18 @@
 ﻿@model IEnumerable<MvcWebsite.Models.Classes>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Class list";
 }
 
-<h1>Index</h1>
+<h1>Class List</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
 
-<form asp-controller="Classes" asp-action="Class Registration">
+<form asp-controller="Classes" asp-action="Index">
     <p>
-        Title: <input type="text" name="SearchString">
+        Title: <input type="text" name="searchString">
         <input type="submit" value="Filter" />
     </p>
 </form>

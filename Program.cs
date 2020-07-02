@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using MvcWebsite.Data;
 using MvcWebsite.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace MvcWebsite
 {
